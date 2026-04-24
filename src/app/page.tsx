@@ -1,10 +1,12 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import ListeningChamber from '@/components/ListeningChamber';
-import Features from '@/components/Features';
-import Pricing from '@/components/Pricing';
 import Footer from '@/components/Footer';
+
+const ListeningChamber = dynamic(() => import('@/components/ListeningChamber'));
+const Features = dynamic(() => import('@/components/Features'));
+const Pricing = dynamic(() => import('@/components/Pricing'));
 
 export default function Home() {
   return (
